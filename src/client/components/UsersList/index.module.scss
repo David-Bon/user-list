@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+}
+
+.userWrap {
+  font-family: Roboto, serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 2px solid #3dbfb8;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 10px;
+}
+
+.title {
+  margin-right: 5px;
+  font-family: "Roboto Medium", serif;
+  color: #838e8e;
+}
+
