@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import React, {forwardRef} from "react";
 import Calendar from './images/calendar@3x.png';
 import DatePicker from "react-datepicker";
+import PropTypes from 'prop-types';
 
 const CustomInput = forwardRef(({value, onClick, errorText}, ref) => {
     return (
@@ -16,6 +17,12 @@ const CustomInput = forwardRef(({value, onClick, errorText}, ref) => {
         </div>
     );
 });
+
+CustomInput.propTypes = {
+    value: PropTypes.string,
+    onClick: PropTypes.func,
+    errorText: PropTypes.string
+};
 
 const DateInput = ({value, onChange, errorText, setIsError, maxDate}) => {
     const handleChange = (e) => {
@@ -38,6 +45,20 @@ const DateInput = ({value, onChange, errorText, setIsError, maxDate}) => {
         />
         {errorText && <div className={styles.error}>{errorText}</div>}
     </div>;
+};
+
+DateInput.propTypes = {
+    value: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.string
+    ]),
+    onChange: PropTypes.func,
+    setIsError: PropTypes.func,
+    maxDate: PropTypes.oneOfType([
+        PropTypes.instanceOf(Date),
+        PropTypes.number
+    ]),
+    errorText: PropTypes.string
 };
 
 export default DateInput;

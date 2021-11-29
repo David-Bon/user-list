@@ -19,14 +19,9 @@ export const userAPI = {
     },
     createUser(data) {
         return instance.post(``, data)
-            .then((res, rej) => {
-                console.error('rejApi', rej)
-                console.log('resApi', res)
-            })
     },
     editUser(data) {
-        const createData = JSON.parse(data);
-        return instance.put(`${createData.id}`, {data})
-            .then(response => console.log(response));
+        console.log(data)
+        return instance.put(`${data.id}`, data)
     },
 };

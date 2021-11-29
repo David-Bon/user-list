@@ -1,22 +1,60 @@
 .root {
   display: flex;
+  flex-direction: column;
 }
 
 .userWrap {
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   border: 2px solid #3dbfb8;
   cursor: pointer;
-  margin-right: 15px;
+  margin-bottom: 30px;
   padding: 10px;
 }
 
 .title {
   margin-right: 5px;
-  font-family: "Roboto Medium", serif;
+  font-family: "Roboto Medium", sans-serif;
   color: #838e8e;
 }
 
+.btn {
+  padding: 5px 0;
+  color: #ffffff;
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 18px;
+  background-color: #3dbfb8;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  &:hover {
+    background: #2fa09a;
+  }
+
+  &:active {
+    background: #256f72;
+  }
+
+  &:disabled{
+    cursor: unset;
+    background: #deeaea;
+  }
+}
+
+.section {
+  padding: 10px;
+}
+
+.addUser {
+  background: #12202d;
+  color: white;
+  position: fixed;
+  right: 22px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 16px;
+}

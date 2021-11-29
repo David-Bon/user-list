@@ -6,6 +6,4 @@ export const getUserList = () => (dispatch) => {
         .then(res => {
             dispatch(setUsersData(res))
         })
-        .catch(() => {
-        });
 }

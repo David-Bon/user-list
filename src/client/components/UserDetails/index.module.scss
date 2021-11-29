@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-right: 5px;
+  font-family: "Roboto Medium", sans-serif;
+  color: #838e8e;
+}
+
+.info {
+  font-family: Roboto, sans-serif;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.backToMain {
+  background: #12202d;
+  color: white;
+  position: fixed;
+  right: 22px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 16px;
+}

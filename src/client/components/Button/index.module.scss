@@ -1,0 +1,23 @@
+.btn {
+  padding: 15px;
+  color: white;
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 18px;
+  background-color: #3dbfb8;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  &:hover {
+    background: #2fa09a;
+  }
+
+  &:active {
+    background: #256f72;
+  }
+
+  &:disabled{
+    cursor: unset;
+    background: #deeaea;
+  }
+}

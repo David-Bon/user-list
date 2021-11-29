@@ -5,4 +5,39 @@
 }
 .inputWrap {
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.dropdown {
+  border: solid 1px #e6efef;
+  background-color: #f8fafa;
+  height: 51.9px;
+  border-radius: 16px;
+  padding-left: 15px;
+  color: #838e8e;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.btn {
+  button {
+    width: 350px;
+  }
+}
+
+.title {
+  margin: 0 0 0 15px;
+  font-family: Roboto, sans-serif;
+}
+
+.backToMain {
+  background: #12202d;
+  color: white;
+  position: fixed;
+  right: 22px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 16px;
 }

@@ -7,7 +7,6 @@ const Input = ({
                    placeHolder,
                    value,
                    onChange,
-                   isError,
                    setIsError,
                    errorText,
                    description
@@ -19,7 +18,7 @@ const Input = ({
     return (
         <label className={styles.root}>
             <div className={classNames(styles.inputWrap, {
-                [styles.isError]: isError
+                [styles.isError]: errorText
             })}>
                 <div className={styles.inputVal}>
                     <input
@@ -31,7 +30,7 @@ const Input = ({
                 </div>
             </div>
 
-            {isError && <div className={styles.error}>{errorText}</div>}
+            {errorText && <div className={styles.error}>{errorText}</div>}
 
             {description && !errorText && <div className={styles.description}>
                 {description}
@@ -41,46 +40,12 @@ const Input = ({
 };
 
 Input.propTypes = {
-    inputName: PropTypes.string,
-    currency: PropTypes.string,
-    textAlignLeft: PropTypes.bool,
     placeHolder: PropTypes.string,
-    className: PropTypes.string,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]),
+    value: PropTypes.string,
     onChange: PropTypes.func,
     setIsError: PropTypes.func,
-    isError: PropTypes.bool,
-    errorText: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array
-    ]),
-    titleDescription: PropTypes.string,
-    description: PropTypes.string,
-    isErrorAbsolute: PropTypes.bool,
-    type: PropTypes.string,
-    disabled: PropTypes.bool,
-    onBlur: PropTypes.func
-};
-
-Input.defaultProps = {
-    value: '',
-    textAlignLeft: false,
-    placeHolder: '',
-    onChange: () => {
-    },
-    onBlur: () => {
-    },
-    setIsError: () => {
-    },
-    isError: false,
-    isErrorAbsolute: true,
-    description: '',
-    type: 'default',
-    disabled: false,
-    errorText: ''
+    errorText: PropTypes.string,
+    description: PropTypes.string
 };
 
 export default Input;
