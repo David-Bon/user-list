@@ -21,7 +21,6 @@ export const userAPI = {
         return instance.post(``, data)
     },
     editUser(data) {
-        console.log(data)
         return instance.put(`${data.id}`, data)
     },
 };
